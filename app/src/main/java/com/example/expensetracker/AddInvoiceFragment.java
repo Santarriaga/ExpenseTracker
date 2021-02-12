@@ -196,5 +196,5 @@ public class AddInvoiceFragment extends Fragment {
         rent = view.findViewById(R.id.rent);
     }
 
-
+    //This is a test
 }
