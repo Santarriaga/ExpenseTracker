@@ -210,6 +210,4 @@
         android:layout_below="@id/btnAddInvoice"
         android:layout_centerHorizontal="true"/>
 
-
-
 </RelativeLayout>
