@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:fontFamily="monospace"
+        android:text="Insert Title "
+        android:textColor="#0C0C0C"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtExpenseTitle"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint=" Title"
+        android:drawableStart="@drawable/ic_title"
+        android:drawablePadding="5dp"
+        android:background="@drawable/custom_input"
+        android:layout_below="@+id/txtDescription"
+        android:elevation="5dp"/>
+
+    <TextView
+        android:id="@+id/txtAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtExpenseTitle"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace"
+        android:text="Enter Amount "
+        android:textColor="#0C0C0C"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtAmount"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:hint="0.00"
+        android:inputType="numberDecimal"
+        android:drawableStart="@drawable/ic_money"
+        android:background="@drawable/custom_input"
+        android:paddingEnd="1dp"
+        android:paddingStart="1dp"
+        android:layout_below="@+id/txtAmount"
+        android:elevation="5dp"/>
+
+
+    <TextView
+        android:id="@+id/txtChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtAmount"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="5dp"
+        android:fontFamily="monospace"
+        android:text="Select Income or Expense:"
+        android:textColor="#0C0C0C"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgIsExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/txtChoice">
+
+        <RadioButton
+            android:id="@+id/rbIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#F6F4FA"
+            android:checked="true"
+            android:fontFamily="monospace"
+            android:text="Income" />
+
+        <RadioButton
+            android:id="@+id/rbExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:buttonTint="#F9F7FB"
+            android:enabled="true"
+            android:fontFamily="monospace"
+            android:text="Expense" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgIsExpense"
+        android:layout_marginTop="30dp"
+        android:fontFamily="monospace"
+        android:text="Select Category"
+        android:textColor="#131313"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/categoryBox"
+        android:layout_below="@id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/utility"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_utility"
+            android:layout_marginTop="10dp" />
+        <ImageView
+            android:id="@+id/entertainment"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_entertainment"
+            android:layout_toRightOf="@+id/utility"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+        <ImageView
+            android:id="@+id/travel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_travel"
+            android:layout_toRightOf="@+id/entertainment"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+        <ImageView
+            android:id="@+id/pet"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_pet"
+            android:layout_toRightOf="@+id/travel"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp" />
+
+        <ImageView
+            android:id="@+id/food"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/utility"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/ic_food" />
+
+        <ImageView
+            android:id="@+id/increase"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_increase"
+            android:layout_below="@+id/utility"
+            android:layout_toRightOf="@+id/food"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"/>
+        <ImageView
+            android:id="@+id/gym"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_gym"
+            android:layout_below="@+id/utility"
+            android:layout_toRightOf="@+id/increase"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"/>
+        <ImageView
+            android:id="@+id/rent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_rent"
+            android:layout_below="@+id/utility"
+            android:layout_toRightOf="@+id/gym"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"/>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btnAddInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categoryBox"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:text="Add" />
+
+    <TextView
+        android:id="@+id/txtWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:text="Enter title and Amount"
+        android:textColor="#E91E63"
+        android:visibility="gone"
+        android:layout_below="@id/btnAddInvoice"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>
